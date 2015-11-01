@@ -1,5 +1,7 @@
-#ifdef JSON_C_DIR_PREFIXED
+#if defined(JSON_C_DIR_PREFIXED)
     #include <json-c/json.h>
+#elif defined(JSON_C_DIR_PREFIXED_LOCAL)
+    #include "json-c/json.h"
 #else
     #include <json.h>
 #endif
